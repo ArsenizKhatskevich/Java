@@ -9,7 +9,7 @@ public class homeworkone {
         String  secondName = string.nextLine();
         String fullName = ( name  + " " +  secondName);
 
-        System.out.println ( fullName);
+        System.out.println ( "Полное имя " + fullName );
 
     }
 }
