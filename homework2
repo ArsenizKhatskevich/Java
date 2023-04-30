@@ -1,0 +1,24 @@
+public class Work {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("сколько коробок вы хотите отправить?");
+       int quantity = scanner.nextByte();
+        System.out.println("сколько весит каждая коробка в киллограммах?");
+        double  weight= scanner.nextDouble();
+       double total = quantity * weight ;
+        System.out.println("Имя получателя");
+        scanner.nextLine();
+        String name = scanner.nextLine();
+        System.out.println("Адресс получателя");
+        String adress= scanner.nextLine();
+
+        System.out.println("Общий вес коробок " + total);
+        System.out.println("Имя получателя " + name);
+        System.out.println("Адресс получателя " + adress);
+System.out.println("Все верно?");
+boolean qua = Boolean.parseBoolean(scanner.nextLine());
+
+
+
+    }
+}
