@@ -13,7 +13,7 @@ public class Work {
         String adress= scanner.nextLine();
 
         System.out.println("Общий вес коробок " + total);
-        System.out.println("Имя получателя " + name);
+        System.out.println("Имя получателя  " + "\"" + name + "\"");
         System.out.println("Адресс получателя " + adress);
 System.out.println("Все верно?");
 boolean qua = Boolean.parseBoolean(scanner.nextLine());
