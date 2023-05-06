@@ -1,0 +1,34 @@
+public class homeworkboolean {
+    public static void main(String[] args) {
+        System.out.println("Я могу купить еду?  " + schop( true, false));
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Какая температура  первой колбы?");
+        int temp1= Integer.parseInt(scanner.nextLine());
+        System.out.println("Какая температура  второй  колбы?");
+        int temp2= Integer.parseInt(scanner.nextLine());
+        System.out.println("Прибор работает корректно? " + kolb(temp1,temp2));
+        if (temp1 < 100 && temp2 >100) {
+            System.out.println("Прибор работает корректно, если температура первой колбы выше 100 градусов," +
+                    " а температура второй колбы меньше 100 градусов. ");
+            ;
+        }
+
+
+    }
+
+    static boolean schop(boolean isEdekaOpen, boolean isReweOpen) {
+        boolean canBuy = isEdekaOpen || isReweOpen;
+        return canBuy;
+    }
+    static boolean kolb (int Temperature1,int Temperature2){
+       boolean kolb1 = Temperature1>100;
+       boolean kolb2= Temperature2 <100;
+        boolean rezult= kolb1 && kolb2;
+        return rezult;
+
+
+    }
+
+
+
+}
