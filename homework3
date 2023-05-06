@@ -1,0 +1,52 @@
+public class metody {
+    public static void main(String[] args) {
+System.out.println(returnHalfString("aabb"));
+System.out.println(returnSecondString("ccdd"));
+        String total = returnHalfString("aabb") + returnSecondString("ccdd");
+        System.out.println(total);
+
+        System.out.println(plus(2,2));
+        System.out.println(minus(2,2));
+        System.out.println(multiplication(2,2));
+        System.out.println(division(4,2));
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Какой сейчас курс USD?");
+        double kurs = Double.parseDouble(scanner.nextLine());
+        System.out.println("Сколько евро вы хотите поменять?");
+        double EUR = Double.parseDouble(scanner.nextLine());
+        System.out.println(" При курсе "+ kurs + " USD за один EUR, при обмене "+ EUR +
+                " вы получите " + valut(kurs,EUR) + " USD");
+
+
+
+    }
+    public static String returnHalfString(String str){
+        int half = str.length() / 2;
+      String resaultStr= str.substring(0, half);
+      return resaultStr;
+    }
+public static String returnSecondString(String str2){
+        int midle = str2.length()/2;
+        String resaultStr2 = str2.substring(midle, str2.length());
+        return resaultStr2;
+}
+
+    static double plus(double x, double y) {
+        double result = x + y;
+        return result;}
+    static double minus(double x, double y) {
+        double result = x - y;
+        return result;}
+    static double multiplication(double x, double y) {
+        double result = x * y;
+        return result;}
+    static double division(double x, double y) {
+        double result = x / y;
+        return result;}
+
+    static double valut (double x, double y){
+        double finish = x * y;
+        return finish;
+    }
+
+}
