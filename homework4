@@ -7,7 +7,7 @@ public class homeworkboolean {
         System.out.println("Какая температура  второй  колбы?");
         int temp2= Integer.parseInt(scanner.nextLine());
         System.out.println("Прибор работает корректно? " + kolb(temp1,temp2));
-        if (temp1 < 100 && temp2 >100) {
+        if (temp1 < 100 || temp2 >100) {
             System.out.println("Прибор работает корректно, если температура первой колбы выше 100 градусов," +
                     " а температура второй колбы меньше 100 градусов. ");
             ;
