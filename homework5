@@ -1,0 +1,135 @@
+package Homework;
+
+import java.util.Scanner;
+
+public class homeforkjelse {
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите число какое вы хотите проверить положительное оно или нет");
+        int number = scanner.nextInt();
+        checkNumber(number);
+        System.out.println("Введите число которое хотите проверить четное оно или нет");
+        double number2 = scanner.nextDouble();
+        checkNumber2(number2);
+        System.out.println("Введите сколько дней в году чтобы проверить весокосный он или нет");
+        int Year = scanner.nextInt();
+        boolean cac = LicYear(Year);
+        if (cac) {
+            System.out.println(" Год является весокосным");
+
+        } else {
+            System.out.println("Год не является весокосным ");
+        }
+        System.out.println("Введите бал студента");
+        int bull = scanner.nextInt();
+        String grade = Abs(bull);
+        System.out.println("Вашша оценка " + grade);
+
+
+        pora("april");
+        typeoftriangle(2,4,5);
+
+        int number3 = 5;
+      String rezault = checkNumberDivisibility(number3);
+        System.out.println(rezault);
+    }
+
+    static void checkNumber(int number) {
+        if (number > 0) {
+            System.out.println(number + " число является положительным");
+        } else if (number < 10) {
+            System.out.println(number + "число явлыется отрицательным");
+        } else if (number == 0) {
+            System.out.println(number + "число равно нулю");
+        } else {
+            System.out.println("вы ввели некоректное значение");
+
+
+        }
+    }
+
+    static void checkNumber2(double number) {
+        if (number % 2 == 0) {
+            System.out.println("Данное число являтеся четным");
+        } else if (number % 2 != 0) {
+            System.out.println("Данное число является нечетным ");
+        } else {
+            System.out.println("Вы ввели не коректное значение");
+        }
+    }
+
+    static boolean LicYear(int number) {
+        if (number % 4 == 0) {
+            return true;
+        } else if (number % 400 == 0) {
+            return true;
+        } else if (number % 100 == 0) {
+            return false;
+        } else
+            return false;
+    }
+
+    static String Abs(int ocena) {
+        if (ocena >= 90 && ocena <= 100) {
+            return "A";
+        } else if (ocena >= 80 && ocena <= 89) {
+            return "B";
+        } else if (ocena >= 70 && ocena <= 79) {
+            return "C";
+        } else if (ocena >= 60 && ocena <= 69) {
+            return "D";
+        } else if (ocena <= 59 && ocena == 0) {
+            return "F";
+        } else return "error";
+
+
+    }
+
+     static String pora(String mount) {
+
+        if (mount.equals("janary") || mount.equals("february") || mount.equals("december")) {
+            System.out.println("Сейчас зима");
+        } else if (mount.equals("march") || mount.equals("april") || mount.equals("may")) {
+            System.out.println("Сейчас весна!");
+        } else if (mount.equals("june") || mount.equals("july") || mount.equals("august")) {
+            System.out.println("Сейчас лето!");
+        } else if (mount.equals("september") || mount.equals("october") || mount.equals("november")) {
+            System.out.println("Сейчас весна!");
+        }
+
+        return mount;
+    }
+
+    static String typeoftriangle(int x, int y, int e) {
+        if (x ==y && y==e) {
+            System.out.println("Треугольник является равностороним ");
+        }
+        else if (x==y || y==e || x==e){
+            System.out.println("Треугольник является равнобедренный");
+        }
+        else System.out.println("Треугольник является разносторонний");
+
+        return null;
+    }
+
+
+     static  String checkNumberDivisibility(int number){
+        boolean destrzy = number%3==0;
+        boolean destfive =number%5==0;
+        if (destfive&&destrzy){
+            System.out.println(number + " данно число кратно 3 и 5");
+        }
+        else if (destrzy){
+            System.out.println(number+ " Данное число кратно 3");
+        }
+        else if (destfive){
+            System.out.println(number + " Данное число кратно 5");
+        }
+        else {
+            return "Данное число не кратно 3 и 5";
+        }
+
+
+         return null;
+     }
+}
