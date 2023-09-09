@@ -1,0 +1,90 @@
+package Lesson.forr;
+
+public class homework {
+    public static void main(String[] args) {
+        //PrintSeven();
+        //PrintFiveTree();
+        //String str = "hello";
+        //char h = 'l';
+//int count = Simvol(str,h);
+       // System.out.println(count);
+        //summa(4);
+    }
+
+
+    static int PrintSeven() {
+        int i;
+        for (i = 1; i <= 100; i++) {
+            if (i % 7 == 0) {
+                System.out.print(i + " ");
+            }
+
+        }
+        return i;
+    }
+
+    static void PrintFiveTree() {
+        int sum = 0;
+        int i;
+        for (i = 1; i <= 50; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                sum += i;
+            }
+        }
+        System.out.println(sum);
+    }
+    static int Simvol (String str , char h){
+        int count = 0;
+
+        for( int i =0;i<str.length();i++) {
+            if (str.charAt(i)==h){
+                count++;
+            }
+        }
+        return count;
+    }
+    /** static int Simvol (String str, char h): Это объявление метода. Он является статическим (static), что означает, что он принадлежит классу, а не экземпляру объекта этого класса. Метод принимает два аргумента: строку str и символ h. Он возвращает целочисленное значение (int).
+     int count = 0;: Это объявление переменной count, которая будет использоваться для подсчета вхождений символа h в строку str. В начале работы метода ее значение устанавливается в 0.
+     for (int i = 0; i < str.length(); i++) {: Это начало цикла for, который будет перебирать каждый символ в строке str. Индекс i инициализируется нулем, и цикл будет выполняться, пока i меньше длины строки str.
+     if (str.charAt(i) == h) {: Внутри цикла происходит сравнение символа в строке str с символом h. Если они равны (т.е., символ в строке совпадает с искомым символом h), то выполняется следующая строка кода:
+     count++;: Эта строка увеличивает значение переменной count на 1 при каждом совпадении символов.
+     }: Завершение блока условия if.
+     }: Завершение цикла for.
+     return count;: После завершения цикла метод возвращает значение переменной count, которое представляет собой количество вхождений символа h в строку str.
+     Таким образом, данный метод позволяет подсчитать, сколько раз символ h встречается в строке str, и возвращает это количество в виде целого числа.
+   **/
+    static void Kvadrat (){
+        int sum =0;
+        for (int i =1 ; i <1000;i++){
+            if (Math.sqrt(i) % 1 == 0) {
+                sum += i;
+        }
+            System.out.println(sum);
+    }
+}
+static void summa (int number){
+        int sum =0;
+        for (int i=2 ; i<number;i++){
+            if (isP(i)){
+                sum += i;
+            }
+        }
+    System.out.println(sum);
+
+}
+
+    private static boolean isP (int num) {
+        if (num <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
+
